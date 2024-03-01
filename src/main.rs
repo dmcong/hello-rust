@@ -25,7 +25,7 @@ async fn sum(params: web::Path<Params>) -> impl Responder {
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| App::new().service(health).service(sum))
-        .bind(("0.0.0.0", 9999))?
+        .bind(("0.0.0.0", 8080))?
         .run()
         .await
 }
